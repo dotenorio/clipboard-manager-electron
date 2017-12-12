@@ -16,16 +16,16 @@ let tray = null
 let template = []
 let contextMenu
 let title = 'Clipboard Manager Electron'
-let arquivo = path.join(__dirname, 'clipboard-manager-electron.lock')
+let lockFile = 'clipboard-manager-electron.lock'
 
 ipcMain.on('get-version', (event) => {
   event.returnValue = app.getVersion()
 })
 
 function isInExecution (callback) {
-  fs.stat(arquivo, (err, data) => {
+  fs.stat(lockFile, (err, data) => {
     if (err || !data) {
-      fs.writeFile(arquivo, '', () => {
+      fs.writeFile(lockFile, '', () => {
         callback(false)
       })
     } else {
@@ -53,7 +53,7 @@ function createTray () {
   template.push({
     label: 'Exit',
     click () {
-      fs.unlink(arquivo, () => {})
+      fs.unlink(lockFile, () => {})
       app.exit()
     }
   })
