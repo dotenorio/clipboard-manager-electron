@@ -32,7 +32,7 @@ function isInExecution (callback) {
       dialog.showMessageBox({
         type: 'info',
         title,
-        message: 'Já existe um ' + title + ' aberto!'
+        message: 'An instance of ' + title + ' already open'
       })
       callback(true)
     }
@@ -41,10 +41,17 @@ function isInExecution (callback) {
 
 function createTray () {
   tray = new Tray(path.join(__dirname, 'icons/16x16.png'))
-  tray.setToolTip('Clique com o botão direito.')
+  tray.setToolTip('Click to show your clipboard history')
 
   template.push({
-    label: 'Fechar',
+    label: 'About',
+    click () {
+      win.show()
+    }
+  })
+
+  template.push({
+    label: 'Exit',
     click () {
       fs.unlink(arquivo, () => {})
       app.exit()
@@ -53,12 +60,16 @@ function createTray () {
   reloadContextMenu()
 
   tray.on('double-click', () => {
-    win.show()
+    tray.popUpContextMenu(contextMenu)
+  })
+
+  tray.on('click', () => {
+    tray.popUpContextMenu(contextMenu)
   })
 
   tray.displayBalloon({
     title,
-    content: 'Vou ficar por aqui se precisar..',
+    content: 'I\'ll stay here if you need me..',
     icon: path.join(__dirname, 'icons/64x64.png')
   })
 }
@@ -70,7 +81,7 @@ function reloadContextMenu () {
 
 function addTemplateItem (currentText) {
   if (!currentText) return
-  if (template.length === 1) {
+  if (template.length === 2) {
     template.unshift({type: 'separator'})
   }
 
@@ -88,7 +99,7 @@ function addTemplateItem (currentText) {
 
 function startMonitoringClipboard () {
   clipboard.on('text-changed', () => {
-    if (template.length === 12) {
+    if (template.length === 13) {
       template.splice(9, 1)
     }
 

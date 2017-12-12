@@ -9,7 +9,7 @@
     "lint": "standard --fix",
     "build-windows": "electron-packager . clipboard-manager-electron --overwrite --ignore=dist --platform=win32 --arch=ia32 --prune=true --out=dist --version-string.CompanyName=dotenorio --version-string.FileDescription=dotenorio --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.ico\" --asar"
   },
-  "author": "Fernando M. Tenório",
+  "author": "Fernando M. Tenório <dotenorio@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "electron": "^1.7.9",
