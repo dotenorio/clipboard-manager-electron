@@ -3,7 +3,7 @@ A clipboard manager built with Electron
 
 ![Preview](https://i.imgur.com/2i26dTv.png)
 
-## How to do
+## How to do a build
 
 ```
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
