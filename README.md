@@ -1,7 +1,7 @@
 # clipboard-manager-electron
 A clipboard manager built with Electron
 
-![Preview](https://i.imgur.com/n3a8ff3.png)
+![Preview](https://i.imgur.com/2i26dTv.png)
 
 ## How to do
 
