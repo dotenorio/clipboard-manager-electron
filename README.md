@@ -16,6 +16,6 @@ Go to folder `dist/clipboard-manager-electron-win32-ia32` and execute the `clipb
 
 ## Download latest release
 
-If don´t want do a build, you can download the [latest release!](https://github.com/dotenorio/clipboard-manager-electron/releases/latest).
+If don´t want do a build, you can download the [latest release](https://github.com/dotenorio/clipboard-manager-electron/releases/latest)!
 
 After download, you need do unzip to any folder, execute the `clipboard-manager-electron.exe`  and be happy too. 
