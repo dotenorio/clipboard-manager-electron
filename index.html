@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Clipboard Manager Electron</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: 'Verdana';
+        background-color: #7ea8ba;
+        color: #eef0e1;
+      }
+      h1 {
+        text-shadow: 2px 2px 4px #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Clipboard Manager Elecron</h1>
+    <p>&copy; dotenorio</p>
+    <p>version <span id="version"></span></p>
+
+    <script type="text/javascript">
+      let ipcRenderer = require('electron').ipcRenderer
+      let version = ipcRenderer.sendSync('get-version')
+      document.getElementById('version').innerHTML = version
+    </script>
+  </body>
+</html>
