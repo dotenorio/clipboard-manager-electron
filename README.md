@@ -12,4 +12,4 @@ $ npm install
 $ npm run build-windows
 ```
 
-Go to folder `dist/clipboard-manager-electron-win32-ia32` and execute the `clipboard-manager-electron.exe`
+Go to folder `dist/clipboard-manager-electron-win32-ia32` and execute the `clipboard-manager-electron.exe` and be happy.
