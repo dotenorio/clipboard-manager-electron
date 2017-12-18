@@ -4,7 +4,7 @@
   "description": "A clipboard manager built with Electron",
   "main": "main.js",
   "scripts": {
-    "start": ".\\node_modules\\.bin\\electron .",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --fix",
     "build-windows": "electron-packager . clipboard-manager-electron --overwrite --ignore=dist --platform=win32 --arch=ia32 --prune=true --out=dist --version-string.CompanyName=dotenorio --version-string.FileDescription=dotenorio --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.ico\" --asar"
@@ -17,5 +17,20 @@
   },
   "devDependencies": {
     "electron-packager": "^10.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotenorio/clipboard-manager-electron.git"
+  },
+  "keywords": [
+    "electron-app",
+    "javascript",
+    "clipboard",
+    "clipboard-manager",
+    "electron"
+  ],
+  "bugs": {
+    "url": "https://github.com/dotenorio/clipboard-manager-electron/issues"
+  },
+  "homepage": "https://github.com/dotenorio/clipboard-manager-electron#readme"
 }
