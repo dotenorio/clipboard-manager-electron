@@ -1,17 +1,10 @@
 language: node_js
 node_js:
   - 8.9.3
-before_install:
-  - sudo dpkg --add-architecture i386
-  - wget -nc https://dl.winehq.org/wine-builds/Release.key
-  - sudo apt-key add Release.key
-  - sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/ -y
-  - sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
-  - sudo apt-get update
-  - sudo apt-get install --install-recommends winehq-stable -y
 install:
   - npm install
 script:
+  - "./install-wine.sh"
   - npm run build-windows
   - (cd dist && zip -r clipboard-manager-electron-win32-ia32.zip clipboard-manager-electron-win32-ia32)
 deploy:
