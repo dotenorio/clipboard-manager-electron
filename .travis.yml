@@ -6,7 +6,7 @@ install:
 script:
   - sudo sh install-wine
   - npm run build-windows
-  - (cd dist && zip -r clipboard-manager-electron-win32-ia32.zip clipboard-manager-electron-win32-ia32 && pwd)
+  - (cd dist && zip -r clipboard-manager-electron-win32-ia32.zip clipboard-manager-electron-win32-ia32 && pwd && ll)
   - pwd
 deploy:
   provider: releases
