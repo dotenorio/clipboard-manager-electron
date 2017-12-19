@@ -1,3 +1,5 @@
+![build-status](https://travis-ci.org/dotenorio/clipboard-manager-electron.png?branch=master)
+
 # clipboard-manager-electron
 A clipboard manager built with Electron
 
