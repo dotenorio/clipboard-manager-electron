@@ -25,5 +25,7 @@ After download, you need do unzip to any folder, execute the `clipboard-manager-
 ## Create Windows Installer
 
 First, you need a build (see how to do above).
+
 After, dowload and install the [InnoSetup 5](http://www.jrsoftware.org/isdl.php).
+
 Last, open the `clipboard-manager-electron-win32-ia32.iss` with InnoSetup change the constant RepositoryDir and click 'Run' and be happy again.
