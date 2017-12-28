@@ -18,7 +18,7 @@ DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 UninstallDisplayIcon={app}\clipboard-manager-electron.exe
 OutputDir={#RepositoryDir}\dist
-OutputBaseFilename=setup-clipboard-manager-electron-win32-ia32-{#MyAppVersionInfo}
+OutputBaseFilename=setup-clipboard-manager-electron-win32-ia32
 SetupIconFile={#RepositoryDir}\icons\icon.ico
 CloseApplications=force
 
