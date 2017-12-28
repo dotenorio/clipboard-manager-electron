@@ -4,11 +4,10 @@ node_js:
 install:
   - npm install
   - sudo sh install-wine
-  - sudo sh install-innosetup
 script:
   - npm run build-windows
   - (cd dist && zip -r -9 clipboard-manager-electron-win32-ia32.zip clipboard-manager-electron-win32-ia32)
-  - iscc - < ./clipboard-manager-electron-win32-ia32.iss
+  - npm run innosetup
 deploy:
   provider: releases
   api_key:

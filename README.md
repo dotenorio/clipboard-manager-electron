@@ -16,12 +16,6 @@ $ npm run build-windows
 
 Go to folder `dist/clipboard-manager-electron-win32-ia32` and execute the `clipboard-manager-electron.exe` and be happy.
 
-## Download latest release
-
-If don´t want do a build, you can download the [latest release](https://github.com/dotenorio/clipboard-manager-electron/releases/latest)!
-
-After download, you need do unzip to any folder, execute the `clipboard-manager-electron.exe`  and be happy too. 
-
 ## Create Windows Installer
 
 First, you need a build (see how to do above).
@@ -29,3 +23,9 @@ First, you need a build (see how to do above).
 After, dowload and install the [InnoSetup 5](http://www.jrsoftware.org/isdl.php).
 
 Last, open the `clipboard-manager-electron-win32-ia32.iss` with InnoSetup change the constant RepositoryDir and click 'Run' and be happy again.
+
+## Download latest release
+
+If don´t want do a build, you can download the [latest release](https://github.com/dotenorio/clipboard-manager-electron/releases/latest)!
+
+After download, you need do unzip to any folder, execute the `clipboard-manager-electron.exe`  and be happy too. 

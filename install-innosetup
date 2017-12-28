@@ -1,3 +1,0 @@
-#!/bin/bash
-wget -nc http://files.jrsoftware.org/ispack/ispack-5.2.3.exe  
-sudo wine ./ispack-5.2.3.exe

@@ -7,7 +7,8 @@
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --fix",
-    "build-windows": "electron-packager . clipboard-manager-electron --overwrite --ignore=dist --platform=win32 --arch=ia32 --prune=true --out=dist --version-string.CompanyName=dotenorio --version-string.FileDescription='clipboard-manager-electron' --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.ico\" --asar"
+    "build-windows": "electron-packager . clipboard-manager-electron --overwrite --ignore=dist --platform=win32 --arch=ia32 --prune=true --out=dist --version-string.CompanyName=dotenorio --version-string.FileDescription='clipboard-manager-electron' --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.ico\" --asar",
+    "innosetup": "node innosetup.js"
   },
   "author": "Fernando M. Tenório <dotenorio@gmail.com>",
   "license": "MIT",
@@ -16,7 +17,8 @@
     "electron-clipboard-extended": "^1.1.0"
   },
   "devDependencies": {
-    "electron-packager": "^10.1.0"
+    "electron-packager": "^10.1.0",
+    "innosetup-compiler": "^5.5.9"
   },
   "repository": {
     "type": "git",
