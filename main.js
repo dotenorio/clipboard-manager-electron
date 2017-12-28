@@ -16,7 +16,7 @@ let tray = null
 let template = []
 let contextMenu
 let title = 'Clipboard Manager Electron'
-let lockFile = 'clipboard-manager-electron.lock'
+let lockFile = path.join(app.getPath('userData'), 'clipboard-manager-electron.lock')
 
 ipcMain.on('get-version', (event) => {
   event.returnValue = app.getVersion()

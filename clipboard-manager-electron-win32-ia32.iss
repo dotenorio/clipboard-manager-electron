@@ -1,0 +1,42 @@
+#define MyAppVersionInfo "v1.0.3"
+#define RepositoryDir "C:\Desenvolvimento\Dotenorio\clipboard-manager-electron\"
+#define MyAppName "clipboard-manager-electron"
+#define MyAppVerName "Clipboard Manager Electron " + MyAppVersionInfo
+#define MyAppPublisher "Fernando M. Tenório <dotenorio@gmail.com>"
+#define MyAppURL "http://github.com/dotenorio/clipboard-manager-electron"
+
+[Setup]
+AppName={#MyAppName}
+AppVerName={#MyAppVerName}
+AppVersion={#MyAppVersionInfo}
+AppPublisher={#MyAppPublisher}
+AppPublisherURL={#MyAppURL}
+AppSupportURL={#MyAppURL}/issues
+AppUpdatesURL={#MyAppURL}/releases
+DefaultDirName={pf}\{#MyAppName}
+DefaultGroupName={#MyAppName}
+DisableProgramGroupPage=yes
+UninstallDisplayIcon={app}\clipboard-manager-electron.exe
+OutputDir={#RepositoryDir}\dist
+OutputBaseFilename=setup-clipboard-manager-electron-win32-ia32-{#MyAppVersionInfo}
+SetupIconFile={#RepositoryDir}\icons\icon.ico
+CloseApplications=force
+
+[InstallDelete]
+Type: files; Name: "{userappdata}\{#MyAppName}\{#MyAppName}.lock"
+
+[Dirs]
+Name: "{app}"; 
+
+[Files]
+Source: "dist\clipboard-manager-electron-win32-ia32\*"; Excludes: "{#MyAppName}.lock"; DestDir: {app}; Flags: recursesubdirs
+
+[Icons]
+Name: "{commonprograms}\Clipboard Manager Electron"; Filename: "{app}\clipboard-manager-electron.exe"
+Name: "{commondesktop}\Clipboard Manager Electron"; Filename: "{app}\clipboard-manager-electron.exe"
+
+[Languages]
+Name: "en"; MessagesFile: "compiler:Default.isl"
+
+[Run]
+Filename: "{app}\clipboard-manager-electron.exe"; Description: "Run after finishing"; Flags: postinstall shellexec skipifsilent
