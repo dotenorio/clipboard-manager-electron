@@ -3,7 +3,7 @@ node_js:
   - 8.9.3
 install:
   - npm install
-  - ./install-wine
+  - sudo sh install-wine
 script:
   - npm run build-windows
   - (cd dist && zip -r clipboard-manager-electron-win32-ia32.zip clipboard-manager-electron-win32-ia32)
