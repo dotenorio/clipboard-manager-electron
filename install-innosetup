@@ -1,5 +1,3 @@
 #!/bin/bash
-mkdir /tmp/innosetup  
-cd /tmp/innosetup  
-wget http://files.jrsoftware.org/ispack/ispack-5.2.3.exe  
-wine ./ispack-5.2.3.exe
+wget -nc http://files.jrsoftware.org/ispack/ispack-5.2.3.exe  
+sudo wine ./ispack-5.2.3.exe
