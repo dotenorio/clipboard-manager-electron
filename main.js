@@ -10,6 +10,13 @@ const fs = require('fs')
 const path = require('path')
 const url = require('url')
 const clipboard = require('electron-clipboard-extended')
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync')
+const adapter = new FileSync(path.join(app.getPath('userData'), 'copied.json'))
+const db = low(adapter)
+
+db.defaults({ copied: [] })
+  .write()
 
 let win
 let tray = null
@@ -25,8 +32,9 @@ ipcMain.on('get-version', (event) => {
 function isInExecution (callback) {
   fs.stat(lockFile, (err, data) => {
     if (err || !data) {
-      fs.writeFile(lockFile, '', () => {
-        callback(false)
+      fs.writeFile(lockFile, '', (err) => {
+        if (err) return callback(err)
+        callback(null, false)
       })
     } else {
       dialog.showMessageBox({
@@ -34,7 +42,7 @@ function isInExecution (callback) {
         title,
         message: 'An instance of ' + title + ' already open'
       })
-      callback(true)
+      callback(null, true)
     }
   })
 }
@@ -79,11 +87,28 @@ function reloadContextMenu () {
   tray.setContextMenu(contextMenu)
 }
 
-function addTemplateItem (currentText) {
+function persistCopied (currentText) {
+  let copied = db.get('copied')
+    .push(currentText)
+    .write()
+  let length = copied.length
+
+  if (length > 10) {
+    copied.splice(0, length - 10)
+    db.set('copied', copied)
+      .write()
+  }
+}
+
+function addTemplateItem (currentText, checked, persist) {
   if (!currentText) return
   if (template.length === 2) {
     template.unshift({type: 'separator'})
   }
+
+  checked = checked !== false
+  persist = persist !== false
+  if (persist) persistCopied(currentText)
 
   template.unshift({
     label: (currentText.length > 50) ? currentText.substring(0, 50) + '...' : currentText,
@@ -91,10 +116,26 @@ function addTemplateItem (currentText) {
       clipboard.writeText(currentText)
     },
     type: 'checkbox',
-    checked: true
+    checked
   })
 
   reloadContextMenu()
+}
+
+function getCopied () {
+  let copied = db.get('copied')
+                 .take(10)
+                 .value()
+  let length = copied.length
+
+  if (length === 0) {
+    addTemplateItem(clipboard.readText())
+  } else {
+    copied.forEach((item) => {
+      let checked = (item === copied[length - 1])
+      addTemplateItem(item, checked, false)
+    })
+  }
 }
 
 function startMonitoringClipboard () {
@@ -111,7 +152,7 @@ function startMonitoringClipboard () {
     addTemplateItem(clipboard.readText())
   }).startWatching()
 
-  addTemplateItem(clipboard.readText())
+  getCopied()
 }
 
 function createWindow () {
@@ -144,7 +185,8 @@ function createWindow () {
     win.hide()
   })
 
-  isInExecution((status) => {
+  isInExecution((err, status) => {
+    if (err) throw new Error(err)
     if (status) return app.exit(0)
     createTray()
     startMonitoringClipboard()
