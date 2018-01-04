@@ -29,22 +29,18 @@ ipcMain.on('get-version', (event) => {
   event.returnValue = app.getVersion()
 })
 
-function isInExecution (callback) {
-  fs.stat(lockFile, (err, data) => {
-    if (err || !data) {
-      fs.writeFile(lockFile, '', (err) => {
-        if (err) return callback(err)
-        callback(null, false)
-      })
-    } else {
-      dialog.showMessageBox({
-        type: 'info',
-        title,
-        message: 'An instance of ' + title + ' already open'
-      })
-      callback(null, true)
-    }
+function isInExecution () {
+  return app.makeSingleInstance((commandLine, workingDirectory) => {
+    dialog.showMessageBox({
+      type: 'info',
+      title,
+      message: 'An instance of ' + title + ' already open'
+    })
   })
+} 
+
+if (isInExecution()) {
+  app.exit()
 }
 
 function createTray () {
@@ -61,7 +57,6 @@ function createTray () {
   template.push({
     label: 'Exit',
     click () {
-      fs.unlink(lockFile, () => {})
       app.exit()
     }
   })
@@ -185,12 +180,8 @@ function createWindow () {
     win.hide()
   })
 
-  isInExecution((err, status) => {
-    if (err) throw new Error(err)
-    if (status) return app.exit(0)
-    createTray()
-    startMonitoringClipboard()
-  })
+  createTray()
+  startMonitoringClipboard()
 }
 
 app.on('ready', createWindow)
