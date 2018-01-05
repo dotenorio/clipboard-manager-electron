@@ -1,4 +1,4 @@
-#define MyAppVersionInfo "v1.0.3"
+#define MyAppVersionInfo "v1.1.0"
 #define RepositoryDir "Z:\home\travis\build\dotenorio\clipboard-manager-electron"
 #define MyAppName "clipboard-manager-electron"
 #define MyAppVerName "Clipboard Manager Electron " + MyAppVersionInfo
@@ -21,9 +21,6 @@ OutputDir={#RepositoryDir}\dist
 OutputBaseFilename=setup-clipboard-manager-electron-win32-ia32
 SetupIconFile={#RepositoryDir}\icons\icon.ico
 CloseApplications=force
-
-[InstallDelete]
-Type: files; Name: "{userappdata}\{#MyAppName}\{#MyAppName}.lock"
 
 [Dirs]
 Name: "{app}"; 
