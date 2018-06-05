@@ -13,12 +13,13 @@
   "author": "Fernando M. Tenório <dotenorio@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "electron-clipboard-extended": "dotenorio/electron-clipboard-extended",
     "auto-launch": "^5.0.5",
-    "electron": "^1.8.1",
-    "electron-clipboard-extended": "^1.1.0",
+    "libxmljs": "^0.18.7",
     "lowdb": "^1.0.0"
   },
   "devDependencies": {
+    "electron": "^1.8.1",
     "electron-packager": "^10.1.0",
     "innosetup-compiler": "^5.5.9",
     "standard": "^10.0.3"
