@@ -4,6 +4,7 @@ node_js:
 install:
   - npm install modclean -g
   - npm install
+  - npm install modclean -g
   - sudo sh install-wine
 before-script:
   - npm run lint
