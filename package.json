@@ -1,6 +1,6 @@
 {
   "name": "clipboard-manager-electron",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A clipboard manager built with Electron",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --fix",
     "build-windows": "electron-packager . clipboard-manager-electron --overwrite --platform=win32 --arch=ia32 --prune=true --out=dist --version-string.CompanyName=dotenorio --version-string.FileDescription='clipboard-manager-electron' --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.ico\" --asar",
-    "innosetup": "node innosetup.js"
+    "innosetup": "node innosetup.js",
+    "postinstall": "modclean -r"
   },
   "author": "Fernando M. Tenório <dotenorio@gmail.com>",
   "license": "MIT",
