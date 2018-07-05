@@ -1,6 +1,6 @@
 {
   "name": "clipboard-manager-electron",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A clipboard manager built with Electron",
   "main": "main.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "electron": "^1.8.1",
     "electron-packager": "^10.1.0",
     "innosetup-compiler": "^5.5.9",
+    "modclean": "^3.0.0-beta.1",
     "standard": "^10.0.3"
   },
   "repository": {
