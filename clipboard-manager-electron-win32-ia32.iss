@@ -1,4 +1,4 @@
-#define MyAppVersionInfo "v1.1.4"
+#define MyAppVersionInfo "v1.1.5"
 #define RepositoryDir "Z:\home\travis\build\dotenorio\clipboard-manager-electron"
 #define MyAppName "clipboard-manager-electron"
 #define MyAppVerName "Clipboard Manager Electron " + MyAppVersionInfo
