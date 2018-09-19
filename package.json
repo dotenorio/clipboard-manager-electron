@@ -1,6 +1,6 @@
 {
   "name": "clipboard-manager-electron",
-  "version": "1.1.5",
+  "version": "2.1.5",
   "description": "A clipboard manager built with Electron",
   "main": "main.js",
   "scripts": {
@@ -11,20 +11,20 @@
     "innosetup": "node innosetup.js",
     "postinstall": "modclean -r"
   },
-  "author": "Fernando M. Tenório <dotenorio@gmail.com>",
+  "author": "Fernando M. Tenório <dotenorio@gmail.com> (https://blog.dotenorio.com)",
   "license": "MIT",
   "dependencies": {
     "auto-launch": "^5.0.5",
     "electron-clipboard-extended": "^1.1.1",
-    "libxmljs": "^0.18.8",
+    "libxmljs": "^0.19.5",
     "lowdb": "^1.0.0"
   },
   "devDependencies": {
-    "electron": "^1.8.7",
-    "electron-packager": "^10.1.2",
+    "electron": "^3.0.0",
+    "electron-packager": "^12.1.2",
     "innosetup-compiler": "^5.5.9",
     "modclean": "^3.0.0-beta.1",
-    "standard": "^10.0.3"
+    "standard": "^12.0.1"
   },
   "repository": {
     "type": "git",

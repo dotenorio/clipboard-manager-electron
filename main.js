@@ -1,15 +1,18 @@
 global.win = null
 global.title = 'Clipboard Manager Electron'
 
-const {app} = require('electron')
-const isInExecution = require('./lib/is_in_execution')
+const { app, dialog } = require('electron')
 const createWindow = require('./lib/create_window')
 
 require('./lib/events')()
 
-if (isInExecution()) {
-  app.exit()
-}
+app.on('second-instance', () => {
+  dialog.showMessageBox({
+    type: 'info',
+    title,
+    message: 'An instance of ' + title + ' already open'
+  })
+})
 
 app.on('ready', createWindow)
 
