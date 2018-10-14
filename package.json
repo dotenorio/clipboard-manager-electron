@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --fix",
     "build-windows": "electron-packager . clipboard-manager-electron --overwrite --platform=win32 --arch=ia32 --prune=true --out=dist --version-string.CompanyName=dotenorio --version-string.FileDescription='clipboard-manager-electron' --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.ico\" --asar",
+    "build-linux": "electron-packager . clipboard-manager-electron --overwrite --platform=linux --arch=x64 --prune=true --out=dist --version-string.CompanyName=dotenorio --version-string.FileDescription='clipboard-manager-electron' --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.ico\" --asar",
     "innosetup": "node innosetup.js",
     "postinstall": "modclean -r"
   },
@@ -20,7 +21,7 @@
     "lowdb": "^1.0.0"
   },
   "devDependencies": {
-    "electron": "^3.0.0",
+    "electron": "^3.0.4",
     "electron-packager": "^12.1.2",
     "innosetup-compiler": "^5.5.9",
     "modclean": "^3.0.0-beta.1",
