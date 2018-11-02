@@ -8,8 +8,11 @@ before-script:
   - npm run lint
 script:
   - npm run build-windows
-  - (cd dist && zip -r -9 clipboard-manager-electron-win32-ia32.zip clipboard-manager-electron-win32-ia32)
+  - npm run build-linux
+  - cd dist
+  - zip -r -9 clipboard-manager-electron-win32-ia32.zip clipboard-manager-electron-win32-ia32
   - npm run innosetup
+  - zip -r -9 clipboard-manager-electron-linux-x64.zip clipboard-manager-electron-linux-x64
 deploy:
   provider: releases
   api_key:
@@ -17,6 +20,7 @@ deploy:
   file:
     - dist/clipboard-manager-electron-win32-ia32.zip
     - dist/setup-clipboard-manager-electron-win32-ia32.exe
+    - dist/clipboard-manager-electron-linux-x64.zip
   skip_cleanup: true
   on:
     repo: dotenorio/clipboard-manager-electron
