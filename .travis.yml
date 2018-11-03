@@ -13,12 +13,12 @@ script:
   - zip -r -9 clipboard-manager-electron-win32-ia32.zip clipboard-manager-electron-win32-ia32
   - npm run innosetup
   - zip -r -9 clipboard-manager-electron-linux-x64.zip clipboard-manager-electron-linux-x64
+  - ls
 deploy:
   provider: releases
   api_key:
     secure: mWEu6RifpV1QS7VHBTVqR/dRucDP0J4ZW6i8HdCb3D6BYbZRjjsWTLjEuoueVonrMEum2rnTkCeusVGtkZeELOkdw4aIYtoGEADP+a0NjrcBX/K3s8uBNXY4CRFmWuMW7qgfkT23rhnmR3ZACaxo8eVnxoAL1vxS46+esJome1fj7Hk7w2e4ZdQENNf6ZyajovPZrn43J8wJdHf8Il9y1BlWv9ITnAgBDH6bwwSmnlfWeK1wS+l66sQAIxe3rj3YwCN5L1XEEvlZhZRjxwqasuTK2UvCuo0wIqTRh+VKB078XSFU+pPZFWJinvXqPlbhdATXQ9u+hLBAk8gbiJIImpikvV9Yo1gK/Kcpn74k6rrQO0rKvC/92weuALgA+v7+Rm3IBUg6/sJxLIOJ1nFpUilD+gm2xVpG3roz+GQ/pnNkpHi+5mPABtZPf9nGf/4sEXMNKjzPqqOh3nZWrCZEzB5l9PH4bh0Rq6QS2hMeJlqW3AuJMemOZpcUL/2RiL8p0jPB8jGmSaGludBJg0x7vsNRfqD9aycoAzO5TIsm/DjuD0dm89TgM62+r1kbq2QdMVKQh+emHMuMOgX0XonfV1H8WBZ3/iSoF+fa6L7AOSi6NS2rCYOMymAACVH0phmpzO7NKl5PKgHeHo9bw9GFMqBQdBTBKTiqSuGe3c/1Khk=
   file:
-    - dist/clipboard-manager-electron-win32-ia32.zip
     - dist/setup-clipboard-manager-electron-win32-ia32.exe
     - dist/clipboard-manager-electron-linux-x64.zip
   skip_cleanup: true
