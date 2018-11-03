@@ -8,12 +8,10 @@ before-script:
   - npm run lint
 script:
   - npm run build-windows
+  - npm run innosetup
   - npm run build-linux
   - cd dist
-  - zip -r -9 clipboard-manager-electron-win32-ia32.zip clipboard-manager-electron-win32-ia32
-  - npm run innosetup
   - zip -r -9 clipboard-manager-electron-linux-x64.zip clipboard-manager-electron-linux-x64
-  - ls
 deploy:
   provider: releases
   api_key:
