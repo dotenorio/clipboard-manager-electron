@@ -11,6 +11,8 @@ script:
   - npm run innosetup
   - npm run build-linux
   - (cd dist && zip -r -9 clipboard-manager-electron-linux-x64.zip clipboard-manager-electron-linux-x64)
+  - npm run build-mac
+  - (cd dist && zip -r -9 clipboard-manager-electron-darwin-x64.zip clipboard-manager-electron-darwin-x64)
 deploy:
   provider: releases
   api_key:
@@ -18,6 +20,7 @@ deploy:
   file:
     - dist/setup-clipboard-manager-electron-win32-ia32.exe
     - dist/clipboard-manager-electron-linux-x64.zip
+    - dist/clipboard-manager-electron-darwin-x64.zip
   skip_cleanup: true
   on:
     repo: dotenorio/clipboard-manager-electron
