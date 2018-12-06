@@ -11,6 +11,10 @@ _Preview Linux Ubuntu 18.10_
 
 ![Preview Linux Ubuntu 18.10](https://i.imgur.com/gXMOIXe.png)
 
+_Preview MacOS_
+
+![Preview MacOS](https://i.imgur.com/CSLIxl2.png)
+
 ## Windows
 
 ### How to do a Windown build
@@ -45,10 +49,23 @@ $ npm run build-linux
 
 Go to folder `dist/clipboard-manager-electron-linux-x64` and execute the `clipboard-manager-electron` and be happy.
 
+## Mac
+
+### How to do a Mac build
+
+```
+$ git clone https://github.com/dotenorio/clipboard-manager-electron.git
+$ cd clipboard-manager-electron
+$ npm install
+$ npm run build-max
+```
+
+Go to folder `dist/clipboard-manager-electron-darwin-x64` and execute the `clipboard-manager-electron` and be happy.
+
 ## Releases
 
 ### Download latest release
 
 If don´t want do a build, you can download the [latest release](https://github.com/dotenorio/clipboard-manager-electron/releases/latest)!
 
-After download, you need do unzip to any folder, execute the `clipboard-manager-electron.exe`  and be happy too. 
+In **Windows** you need run the setup only.. In **Linux** or **Mac**, after download, you need do unzip to any folder, execute the `clipboard-manager-electron` and be happy too. 
