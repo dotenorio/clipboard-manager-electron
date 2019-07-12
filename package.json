@@ -20,7 +20,7 @@
     "libxmljs": "^0.19.5",
     "lowdb": "^1.0.0",
     "node-notifier": "^5.3.0",
-    "lodash": ">=4.17.11"
+    "lodash": ">=4.17.13"
   },
   "devDependencies": {
     "electron": "^5.0.0",
