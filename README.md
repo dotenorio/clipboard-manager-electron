@@ -22,8 +22,8 @@ _Preview MacOS_
 ```
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
-$ npm install
-$ npm run build-windows
+$ yarn install
+$ yarn build-windows
 ```
 
 Go to folder `dist/clipboard-manager-electron-win32-ia32` and execute the `clipboard-manager-electron.exe` and be happy.
@@ -43,11 +43,22 @@ Last, open the `clipboard-manager-electron-win32-ia32.iss` with InnoSetup change
 ```
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
-$ npm install
-$ npm run build-linux
+$ yarn
+$ yarn build-linux
 ```
 
 Go to folder `dist/clipboard-manager-electron-linux-x64` and execute the `clipboard-manager-electron` and be happy.
+
+### How to install a Linux snap
+
+```
+$ git clone https://github.com/dotenorio/clipboard-manager-electron.git
+$ cd clipboard-manager-electron
+$ yarn install
+$ yarn build-snap
+$ cd dist
+$ sudo snap install --dangerous dist/clipboard-manager-electron_*.snap 
+```
 
 ## Mac
 
@@ -56,8 +67,8 @@ Go to folder `dist/clipboard-manager-electron-linux-x64` and execute the `clipbo
 ```
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
-$ npm install
-$ npm run build-max
+$ yarn install
+$ yarn build-max
 ```
 
 Go to folder `dist/clipboard-manager-electron-darwin-x64` and execute the `clipboard-manager-electron` and be happy.
