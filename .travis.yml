@@ -4,6 +4,7 @@ node_js:
 install:
   - npm install
   - sudo sh install-wine
+  - sudo snap install snapcraft --classic
 before-script:
   - npm run lint
 script:
