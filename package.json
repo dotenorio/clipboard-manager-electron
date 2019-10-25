@@ -17,19 +17,17 @@
   "author": "Fernando M. Tenório <dotenorio@gmail.com> (https://blog.dotenorio.com)",
   "license": "MIT",
   "dependencies": {
-    "auto-launch": "^5.0.5",
-    "libxmljs": "^0.19.5",
-    "lodash": ">=4.17.15",
+    "lodash": "^4.17.15",
     "lowdb": "^1.0.0",
-    "node-notifier": "^5.4.3"
+    "node-notifier": "^6.0.0"
   },
   "devDependencies": {
-    "electron": "^6.0.3",
+    "electron": "^7.0.0",
     "electron-builder": "^21.2.0",
-    "electron-packager": "^14.0.4",
+    "electron-packager": "^14.0.6",
     "innosetup-compiler": "^5.6.1",
     "modclean": "^3.0.0-beta.1",
-    "standard": "^14.0.2"
+    "standard": "^14.3.1"
   },
   "repository": {
     "type": "git",
