@@ -22,9 +22,9 @@
     "node-notifier": "^6.0.0"
   },
   "devDependencies": {
-    "electron": "^7.0.0",
-    "electron-builder": "^21.2.0",
-    "electron-packager": "^14.0.6",
+    "electron": "^7.1.9",
+    "electron-builder": "^22.2.0",
+    "electron-packager": "^14.2.0",
     "innosetup-compiler": "^5.6.1",
     "modclean": "^3.0.0-beta.1",
     "standard": "^14.3.1"
