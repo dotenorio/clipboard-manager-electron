@@ -6,6 +6,8 @@ const createWindow = require('./lib/create_window')
 
 require('./lib/events')()
 
+app.allowRendererProcessReuse = false
+
 app.on('second-instance', () => {
   dialog.showMessageBox({
     type: 'info',
