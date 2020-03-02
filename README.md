@@ -56,7 +56,6 @@ $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
 $ yarn install
 $ yarn build-snap
-$ cd dist
 $ sudo snap install --dangerous dist/clipboard-manager-electron_*.snap 
 ```
 
@@ -68,7 +67,7 @@ $ sudo snap install --dangerous dist/clipboard-manager-electron_*.snap
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
 $ yarn install
-$ yarn build-max
+$ yarn build-mac
 ```
 
 Go to folder `dist/clipboard-manager-electron-darwin-x64` and execute the `clipboard-manager-electron` and be happy.

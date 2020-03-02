@@ -1,17 +1,13 @@
 {
   "name": "clipboard-manager-electron",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "description": "A clipboard manager built with Electron",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --fix",
-    "build-mac": "electron-packager . clipboard-manager-electron --overwrite --platform=darwin --arch=x64 --prune=true --out=dist --version-string.FileDescription='clipboard-manager-electron' --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.icns\" --asar",
-    "build-windows": "electron-packager . clipboard-manager-electron --overwrite --platform=win32 --arch=ia32 --prune=true --out=dist --version-string.CompanyName=dotenorio --version-string.FileDescription='clipboard-manager-electron' --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.ico\" --asar",
-    "build-linux": "electron-packager . clipboard-manager-electron --overwrite --platform=linux --arch=x64 --prune=true --out=dist --version-string.CompanyName=dotenorio --version-string.FileDescription='clipboard-manager-electron' --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.ico\" --asar",
-    "build-snap": "electron-builder -l snap -p never",
-    "innosetup": "node innosetup.js",
+    "build": "electron-builder -p never --config ./electron-builder.yml",
     "postinstall": "yarn audit && yarn autoclean --force && modclean -r"
   },
   "author": "Fernando M. Tenório <dotenorio@gmail.com> (https://blog.dotenorio.com)",
@@ -25,8 +21,6 @@
   "devDependencies": {
     "electron": "^8.0.2",
     "electron-builder": "^22.3.2",
-    "electron-packager": "^14.2.1",
-    "innosetup-compiler": "^5.6.1",
     "modclean": "^3.0.0-beta.1",
     "standard": "^14.3.1"
   },

@@ -12,7 +12,8 @@ app.on('second-instance', () => {
   dialog.showMessageBox({
     type: 'info',
     title,
-    message: 'An instance of ' + title + ' already open'
+    message: 'An instance of ' + title + ' already open',
+    buttons: ['Ok']
   })
 })
 
