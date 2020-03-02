@@ -10,8 +10,7 @@ matrix:
 
     - os: linux
       services: docker
-      language: generic
-      sudo: required
+      language: node_js
       node_js: "12"
 
 cache:
