@@ -3,6 +3,3 @@ productName: "clipboard-manager-electron"
 copyright: "dotenorio"
 linux:
   category: "Utility"
-
-
-  "build-linux": "electron-packager . clipboard-manager-electron --overwrite --platform=linux --arch=x64 --prune=true --out=dist --version-string.CompanyName=dotenorio --version-string.FileDescription='clipboard-manager-electron' --version-string.ProductName='clipboard-manager-electron' --icon=\"icons/icon.ico\" --asar",
