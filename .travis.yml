@@ -36,9 +36,9 @@ script:
         -v ~/.cache/electron-builder:/root/.cache/electron-builder \
         electronuserland/builder:wine \
         /bin/bash -c "
-          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash &&
-          source /root/.bashrc &&
-          nvm install 12 &&
+          curl -L https://nodejs.org/dist/v12.16.1/node-v12.16.1-linux-x64.tar.gz | tar xz -C /usr/local --strip-components=1 && \
+          unlink /usr/local/CHANGELOG.md && unlink /usr/local/LICENSE && unlink /usr/local/README.md && \
+          npm config set unsafe-perm true
           yarn --link-duplicates --pure-lockfile &&
           yarn build --linux --win"
     else
