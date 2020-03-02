@@ -11,6 +11,9 @@ matrix:
     - os: linux
       services: docker
       language: generic
+      env:
+        - ELECTRON_CACHE=$HOME/.cache/electron
+        - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
 
 cache:
   directories:
@@ -30,8 +33,8 @@ script:
         -v ${PWD}:/project \
         -v ~/.cache/electron:/root/.cache/electron \
         -v ~/.cache/electron-builder:/root/.cache/electron-builder \
-        electronuserland/builder:wine \
-        /bin/bash -c "nvm install 12 && yarn --link-duplicates --pure-lockfile && yarn build --linux --win"
+        electronuserland/electron-builder:wine \
+        /bin/bash -c "npm i -g yarn && yarn && yarn build --linux --win"
     else
       yarn build
     fi
