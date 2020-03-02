@@ -11,6 +11,8 @@ matrix:
     - os: linux
       services: docker
       language: generic
+      sudo: required
+      dist: xenial
 
 cache:
   directories:
