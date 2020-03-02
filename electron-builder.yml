@@ -4,11 +4,11 @@ copyright: dotenorio
 win:
   icon: icons/icon.ico
   target:
-    - target: nsis,
+    - target: nsis
       arch:
         - x64
         - ia32
-    - target: portable,
+    - target: portable
       arch:
         - x64
         - ia32
