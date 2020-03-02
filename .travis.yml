@@ -34,8 +34,12 @@ script:
         -v ${PWD}:/project \
         -v ~/.cache/electron:/root/.cache/electron \
         -v ~/.cache/electron-builder:/root/.cache/electron-builder \
-        electronuserland/builder \
-        /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn build --linux --win"
+        electronuserland/builder:wine \
+        /bin/bash -c "
+          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash &&
+          nvm install 12 &&
+          yarn --link-duplicates --pure-lockfile &&
+          yarn build --linux --win"
     else
       yarn build
     fi
