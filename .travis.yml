@@ -12,7 +12,7 @@ matrix:
       services: docker
       language: generic
       sudo: required
-      dist: xenial
+      node_js: "12"
 
 cache:
   directories:
