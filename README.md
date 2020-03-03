@@ -26,7 +26,7 @@ $ yarn
 $ yarn build -win
 ```
 
-Go to folder `dist` and execute the `clipboard-manager-electron X.X.X.exe` or `clipboard-manager-electron Setup 3.3.0.exe` and be happy.
+Go to folder `dist` and execute the `clipboard-manager-electron X.X.X.exe` or `clipboard-manager-electron Setup X.X.X.exe` and be happy.
 
 ## Linux
 
@@ -59,4 +59,3 @@ Go to folder `dist` and execute the `clipboard-manager-electron-X.X.X.dmg` and b
 ### Download latest release
 
 If don´t want do a build, you can download the [latest release](https://github.com/dotenorio/clipboard-manager-electron/releases/latest)!
-
