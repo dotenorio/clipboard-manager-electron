@@ -22,19 +22,11 @@ _Preview MacOS_
 ```
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
-$ yarn install
-$ yarn build-windows
+$ yarn
+$ yarn build -win
 ```
 
-Go to folder `dist/clipboard-manager-electron-win32-ia32` and execute the `clipboard-manager-electron.exe` and be happy.
-
-### Create Windows installer
-
-First, you need a build (see how to do above).
-
-After, dowload and install the [InnoSetup 5](http://www.jrsoftware.org/isdl.php).
-
-Last, open the `clipboard-manager-electron-win32-ia32.iss` with InnoSetup change the constant RepositoryDir and click 'Run' and be happy again.
+Go to folder `dist` and execute the `clipboard-manager-electron X.X.X.exe` or `clipboard-manager-electron Setup 3.3.0.exe` and be happy.
 
 ## Linux
 
@@ -44,20 +36,10 @@ Last, open the `clipboard-manager-electron-win32-ia32.iss` with InnoSetup change
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
 $ yarn
-$ yarn build-linux
+$ yarn build -linux
 ```
 
-Go to folder `dist/clipboard-manager-electron-linux-x64` and execute the `clipboard-manager-electron` and be happy.
-
-### How to install a Linux snap
-
-```
-$ git clone https://github.com/dotenorio/clipboard-manager-electron.git
-$ cd clipboard-manager-electron
-$ yarn install
-$ yarn build-snap
-$ sudo snap install --dangerous dist/clipboard-manager-electron_*.snap 
-```
+Go to folder `dist/` and execute the `clipboard-manager-electron_X.X.X_<arch>.deb` or `clipboard-manager-electron_X.X.X_<arch>.rpm` and be happy.
 
 ## Mac
 
@@ -66,11 +48,11 @@ $ sudo snap install --dangerous dist/clipboard-manager-electron_*.snap
 ```
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
-$ yarn install
-$ yarn build-mac
+$ yarn
+$ yarn build -mac
 ```
 
-Go to folder `dist/clipboard-manager-electron-darwin-x64` and execute the `clipboard-manager-electron` and be happy.
+Go to folder `dist` and execute the `clipboard-manager-electron-X.X.X.dmg` and be happy.
 
 ## Releases
 
@@ -78,4 +60,3 @@ Go to folder `dist/clipboard-manager-electron-darwin-x64` and execute the `clipb
 
 If don´t want do a build, you can download the [latest release](https://github.com/dotenorio/clipboard-manager-electron/releases/latest)!
 
-In **Windows** you need run the setup only.. In **Linux** or **Mac**, after download, you need do unzip to any folder, execute the `clipboard-manager-electron` and be happy too. 
