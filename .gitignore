@@ -7,3 +7,4 @@ node_modules/
 Release.key
 .DS_Store
 .vscode
+.todo
