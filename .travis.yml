@@ -1,30 +1,59 @@
-language: node_js
-node_js:
-  - 12.14.1
-install:
-  - npm install
-  - sudo sh install-wine
-before-script:
-  - npm run lint
+os: linux
+language: generic
+
+jobs:
+  include:
+    - os: osx
+      osx_image: xcode10.2
+      language: node_js
+      node_js: "12"
+      env:
+        - ELECTRON_CACHE=$HOME/.cache/electron
+        - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+
+    - os: linux
+      services: docker
+      language: generic
+      
+cache:
+  directories:
+    - node_modules
+    - $HOME/.cache/electron
+    - $HOME/.cache/electron-builder
+
 script:
-  - npm run build-windows
-  - npm run innosetup
-  - npm run build-linux
-  - (cd dist && zip -r -9 clipboard-manager-electron-linux-x64.zip clipboard-manager-electron-linux-x64)
-  - npm run build-mac
-  - (cd dist && zip -r -9 clipboard-manager-electron-darwin-x64.zip clipboard-manager-electron-darwin-x64)
-  - npm run build-snap
+  - |
+    if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+      docker run --rm \
+        $(env | \
+          grep -Eo '^[^\s=]*(NODE_|ELECTRON_|YARN_|NPM_|TRAVIS|DROPBOX|GITHUB)[^\s=]*' | \
+          sed '/^$/d;s/^/-e /' | \
+          paste -sd ' ' \
+        ) \
+        -v ${PWD}:/project \
+        -v ~/.cache/electron:/root/.cache/electron \
+        -v ~/.cache/electron-builder:/root/.cache/electron-builder \
+        electronuserland/builder:wine \
+        /bin/bash -c "
+          curl -L https://nodejs.org/dist/v12.16.1/node-v12.16.1-linux-x64.tar.gz | tar xz -C /usr/local --strip-components=1 && \
+          unlink /usr/local/CHANGELOG.md && unlink /usr/local/LICENSE && unlink /usr/local/README.md && \
+          npm config set unsafe-perm true &&
+          yarn --link-duplicates --pure-lockfile &&
+          yarn build --linux --win"
+    else
+      yarn build
+    fi
+before_cache:
+  - rm -rf $HOME/.cache/electron-builder/wine
+
 deploy:
   provider: releases
-  api_key:
+  token:
     secure: mWEu6RifpV1QS7VHBTVqR/dRucDP0J4ZW6i8HdCb3D6BYbZRjjsWTLjEuoueVonrMEum2rnTkCeusVGtkZeELOkdw4aIYtoGEADP+a0NjrcBX/K3s8uBNXY4CRFmWuMW7qgfkT23rhnmR3ZACaxo8eVnxoAL1vxS46+esJome1fj7Hk7w2e4ZdQENNf6ZyajovPZrn43J8wJdHf8Il9y1BlWv9ITnAgBDH6bwwSmnlfWeK1wS+l66sQAIxe3rj3YwCN5L1XEEvlZhZRjxwqasuTK2UvCuo0wIqTRh+VKB078XSFU+pPZFWJinvXqPlbhdATXQ9u+hLBAk8gbiJIImpikvV9Yo1gK/Kcpn74k6rrQO0rKvC/92weuALgA+v7+Rm3IBUg6/sJxLIOJ1nFpUilD+gm2xVpG3roz+GQ/pnNkpHi+5mPABtZPf9nGf/4sEXMNKjzPqqOh3nZWrCZEzB5l9PH4bh0Rq6QS2hMeJlqW3AuJMemOZpcUL/2RiL8p0jPB8jGmSaGludBJg0x7vsNRfqD9aycoAzO5TIsm/DjuD0dm89TgM62+r1kbq2QdMVKQh+emHMuMOgX0XonfV1H8WBZ3/iSoF+fa6L7AOSi6NS2rCYOMymAACVH0phmpzO7NKl5PKgHeHo9bw9GFMqBQdBTBKTiqSuGe3c/1Khk=
   file_glob: true
   file:
-    - dist/setup-clipboard-manager-electron-win32-ia32.exe
-    - dist/clipboard-manager-electron-linux-x64.zip
-    - dist/clipboard-manager-electron-darwin-x64.zip
-    - dist/clipboard-manager-electron_*_amd64.snap
-  skip_cleanup: true
+    - dist/clipboard-manager-electron*.*
+  cleanup: true
   on:
     repo: dotenorio/clipboard-manager-electron
     tags: true
