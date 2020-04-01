@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --fix",
     "build": "electron-builder -p never --config ./electron-builder.yml",
-    "postinstall": "yarn audit && yarn autoclean --force && modclean -r"
+    "postinstall": "modclean -r"
   },
   "author": "Fernando M. Tenório <dotenorio@gmail.com> (https://blog.dotenorio.com)",
   "license": "MIT",
@@ -19,10 +19,10 @@
     "node-notifier": "^6.0.0"
   },
   "devDependencies": {
-    "electron": "^8.1.0",
-    "electron-builder": "^22.4.0",
+    "electron": "^8.2.0",
+    "electron-builder": "^22.4.1",
     "modclean": "^3.0.0-beta.1",
-    "standard": "^14.3.1"
+    "standard": "^14.3.3"
   },
   "repository": {
     "type": "git",
