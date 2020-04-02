@@ -39,7 +39,7 @@ script:
           unlink /usr/local/CHANGELOG.md && unlink /usr/local/LICENSE && unlink /usr/local/README.md && \
           npm config set unsafe-perm true &&
           npm ci &&
-          npm run build --linux --win"
+          npm run build -- --linux --win"
     else
       npm run build
     fi
