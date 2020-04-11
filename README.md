@@ -23,7 +23,7 @@ _Preview MacOS_
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
 $ yarn
-$ yarn build -win
+$ yarn build --win
 ```
 
 Go to folder `dist` and execute the `clipboard-manager-electron X.X.X.exe` or `clipboard-manager-electron Setup X.X.X.exe` and be happy.
@@ -36,7 +36,7 @@ Go to folder `dist` and execute the `clipboard-manager-electron X.X.X.exe` or `c
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
 $ yarn
-$ yarn build -linux
+$ yarn build --linux
 ```
 
 Go to folder `dist/` and execute the `clipboard-manager-electron_X.X.X_<arch>.deb` or `clipboard-manager-electron_X.X.X_<arch>.rpm` and be happy.
@@ -49,7 +49,7 @@ Go to folder `dist/` and execute the `clipboard-manager-electron_X.X.X_<arch>.de
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
 $ yarn
-$ yarn build -mac
+$ yarn build --mac
 ```
 
 Go to folder `dist` and execute the `clipboard-manager-electron-X.X.X.dmg` and be happy.
