@@ -17,7 +17,8 @@ _Preview MacOS_
 
 ## Windows
 
-### How to do a Windown build
+### How to do a Windown build (You can go with either Yarn build or Npm build) 
+#### Yarn Build
 
 ```
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
@@ -25,12 +26,20 @@ $ cd clipboard-manager-electron
 $ yarn
 $ yarn build --win
 ```
+#### NPM build
+```
+$ git clone https://github.com/dotenorio/clipboard-manager-electron.git
+$ cd clipboard-manager-electron
+$ npm install
+$ npm run dist
+```
 
 Go to folder `dist` and execute the `clipboard-manager-electron X.X.X.exe` or `clipboard-manager-electron Setup X.X.X.exe` and be happy.
 
 ## Linux
 
-### How to do a Linux build
+### How to do a Linux build (You can go with either Yarn build or Npm build)
+#### Yarn Build
 
 ```
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
@@ -39,17 +48,33 @@ $ yarn
 $ yarn build --linux
 ```
 
+#### NPM build
+```
+$ git clone https://github.com/dotenorio/clipboard-manager-electron.git
+$ cd clipboard-manager-electron
+$ npm install
+$ npm run dist
+```
+
 Go to folder `dist/` and execute the `clipboard-manager-electron_X.X.X_<arch>.deb` or `clipboard-manager-electron_X.X.X_<arch>.rpm` and be happy.
 
 ## Mac
 
-### How to do a Mac build
-
+### How to do a Mac build (You can go with either Yarn build or Npm build)
+#### Yarn Build
 ```
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
 $ yarn
 $ yarn build --mac
+```
+
+#### NPM build
+```
+$ git clone https://github.com/dotenorio/clipboard-manager-electron.git
+$ cd clipboard-manager-electron
+$ npm install
+$ npm run dist
 ```
 
 Go to folder `dist` and execute the `clipboard-manager-electron-X.X.X.dmg` and be happy.
