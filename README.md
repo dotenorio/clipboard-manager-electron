@@ -3,17 +3,21 @@
 # Clipboard Manager Electron
 A clipboard manager built with Electron
 
-_Preview Windows_
+**Preview Windows**
 
 ![Preview Windows](https://i.imgur.com/2i26dTv.png)
 
-_Preview Linux Ubuntu 18.10_
+_needs update, view issue #17_
 
-![Preview Linux Ubuntu 18.10](https://i.imgur.com/gXMOIXe.png)
+**Preview Linux Ubuntu 19.10**
 
-_Preview MacOS_
+![Preview Linux Ubuntu 19.10](https://i.imgur.com/ohLfBdf.png)
+
+**Preview MacOS**
 
 ![Preview MacOS](https://i.imgur.com/CSLIxl2.png)
+
+_needs update, view issue #17_
 
 ## Windows
 
