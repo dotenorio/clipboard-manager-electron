@@ -17,7 +17,7 @@ _needs update, view issue #17_
 
 ![Preview MacOS](https://i.imgur.com/CSLIxl2.png)
 
-_needs update, view issue #17__
+_needs update, view issue #17_
 
 ## Windows
 
