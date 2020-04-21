@@ -31,7 +31,7 @@ $ yarn build --win
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
 $ npm install
-$ npm run dist
+$ npm run build -- --win
 ```
 
 Go to folder `dist` and execute the `clipboard-manager-electron X.X.X.exe` or `clipboard-manager-electron Setup X.X.X.exe` and be happy.
@@ -53,7 +53,7 @@ $ yarn build --linux
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
 $ npm install
-$ npm run dist
+$ npm run build -- --linux
 ```
 
 Go to folder `dist/` and execute the `clipboard-manager-electron_X.X.X_<arch>.deb` or `clipboard-manager-electron_X.X.X_<arch>.rpm` and be happy.
@@ -74,7 +74,7 @@ $ yarn build --mac
 $ git clone https://github.com/dotenorio/clipboard-manager-electron.git
 $ cd clipboard-manager-electron
 $ npm install
-$ npm run dist
+$ npm run build -- --mac
 ```
 
 Go to folder `dist` and execute the `clipboard-manager-electron-X.X.X.dmg` and be happy.
