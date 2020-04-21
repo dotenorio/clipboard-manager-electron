@@ -7,9 +7,7 @@
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard --fix",
-    "build": "electron-builder -p never --config ./electron-builder.yml",
-    "postinstall": "modclean -r",
-    "dist": "electron-builder"
+    "build": "electron-builder -p never --config ./electron-builder.yml"
   },
   "author": "Fernando M. Tenório <dotenorio@gmail.com> (https://blog.dotenorio.com)",
   "license": "MIT",
@@ -22,63 +20,7 @@
   "devDependencies": {
     "electron": "^8.2.0",
     "electron-builder": "^22.4.1",
-    "modclean": "^3.0.0-beta.1",
     "standard": "^14.3.3"
-  },
-  "build": {
-    "appId": "com.dotrnorio.clipboardManager",
-    "productName": "Electron-Clipboard-Manager",
-    "target": "NSIS",
-    "copyright": "dotenorio",
-    "linux": {
-      "category": "Utility",
-      "icon": "icons/icon.icns",
-      "target": [
-        {
-        "target": "deb",
-        "arch": [
-          "x64",
-          "ia32"
-          ]
-        },
-        {
-        "target": "rpm",
-        "arch": [
-          "x64",
-          "ia32"
-          ]
-        }
-      ]
-    },
-    "mac": {
-      "icon": "icons/icon.icns",
-      "target": [
-        "dmg"
-      ]
-    },
-    "win": {
-      "asar": false,
-      "icon": "icons/icon.ico",
-      "target": [
-        {
-        "target": "nsis",
-        "arch": [
-          "x64",
-          "ia32"
-          ]
-        },
-        {
-        "target": "portable",
-        "arch": [
-          "x64",
-          "ia32"
-          ]
-        }
-      ]
-    },
-    "directories": {
-      "output": "dist"
-    }
   },
   "repository": {
     "type": "git",
