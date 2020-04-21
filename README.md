@@ -5,9 +5,7 @@ A clipboard manager built with Electron
 
 **Preview Windows**
 
-![Preview Windows](https://i.imgur.com/2i26dTv.png)
-
-_needs update, view issue #17_
+![Preview Windows](https://i.imgur.com/CJUi7Z5.png)
 
 **Preview Linux Ubuntu 19.10**
 
