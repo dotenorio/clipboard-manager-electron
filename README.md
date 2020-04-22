@@ -13,9 +13,9 @@ A clipboard manager built with Electron
 
 **Preview MacOS**
 
-![Preview MacOS](https://i.imgur.com/CSLIxl2.png)
+![Preview MacOS](https://i.imgur.com/UAQhg4U.png)
 
-_needs update, view issue #17_
+_the icon are BIG, it's wrong. Help me on the issue #21_
 
 ## Shortcuts (BETA)
 
