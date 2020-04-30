@@ -5,9 +5,7 @@ A clipboard manager built with Electron
 
 **Preview Windows**
 
-![Preview Windows](https://i.imgur.com/2i26dTv.png)
-
-_needs update, view issue #17_
+![Preview Windows 10](https://i.imgur.com/bvkouHc.pngg)
 
 **Preview Linux Ubuntu 19.10**
 
@@ -15,9 +13,9 @@ _needs update, view issue #17_
 
 **Preview MacOS**
 
-![Preview MacOS](https://i.imgur.com/CSLIxl2.png)
+![Preview MacOS](https://i.imgur.com/UAQhg4U.png)
 
-_needs update, view issue #17_
+_the icon are BIG, it's wrong. Help me on the issue #21_
 
 ## Shortcuts (BETA)
 
