@@ -19,6 +19,22 @@ _needs update, view issue #17_
 
 _needs update, view issue #17_
 
+## Shortcuts (BETA)
+
+Now we have some shortcuts, but it is on beta state. Test and give me a feedback, thanks!
+
+* `CmdOrCtrl+Shift+0` ~ get copied item on position #1
+* `CmdOrCtrl+Shift+1` ~ get copied item on position #2
+* `CmdOrCtrl+Shift+2` ~ get copied item on position #3
+* `CmdOrCtrl+Shift+3` ~ get copied item on position #4
+* `CmdOrCtrl+Shift+4` ~ get copied item on position #5
+* `CmdOrCtrl+Shift+5` ~ get copied item on position #6
+* `CmdOrCtrl+Shift+6` ~ get copied item on position #7
+* `CmdOrCtrl+Shift+7` ~ get copied item on position #8
+* `CmdOrCtrl+Shift+8` ~ get copied item on position #9
+* `CmdOrCtrl+Shift+9` ~ get copied item on position #10
+* `CmdOrCtrl+Shift+Y` ~ focus clipboard-manager-electron _(only for windows)_
+
 ## Windows
 
 ### How to do a Windown build (You can go with either Yarn build or Npm build) 
