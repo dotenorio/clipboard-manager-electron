@@ -1,18 +1,18 @@
 body {
     font-family: sans-serif;
+    background: #000;
 }
   
 .item {
-    border: 1px solid lightblue;
+    border: 1px solid rgb(135, 203, 226);
+    color: white;
+    background: #5f5555;
     margin: 5px;
     padding: 5px;
 }
 
-.item.active {
-    background: yellow;
-}
-
-.item:hover {
+.item:hover, .item.active{
     cursor: pointer;
+    border: 1px solid red;
 }
   
