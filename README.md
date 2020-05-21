@@ -32,6 +32,7 @@ Now we have some shortcuts, but it is on beta state. Test and give me a feedback
 * `CmdOrCtrl+Shift+8` ~ get copied item on position #9
 * `CmdOrCtrl+Shift+9` ~ get copied item on position #10
 * `CmdOrCtrl+Shift+Y` ~ focus clipboard-manager-electron _(only for windows)_
+* `CmdOrCtrl+L`       ~ open window with clipboard history _(by @savannahar68)_
 
 ## Windows
 

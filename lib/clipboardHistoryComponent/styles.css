@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: #000;
 }
   
@@ -9,6 +9,8 @@ body {
     background: #5f5555;
     margin: 5px;
     padding: 5px;
+    word-wrap: break-word;
+    border-radius: 3px;
 }
 
 .item:hover, .item.active{
