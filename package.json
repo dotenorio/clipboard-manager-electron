@@ -13,13 +13,13 @@
   "license": "MIT",
   "dependencies": {
     "auto-launch": "^5.0.5",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
-    "node-notifier": "^7.0.1"
+    "node-notifier": "^8.0.0"
   },
   "devDependencies": {
-    "electron": "^9.1.0",
-    "electron-builder": "^22.7.0",
+    "electron": "^10.1.1",
+    "electron-builder": "^22.8.0",
     "standard": "^14.3.4"
   },
   "repository": {
