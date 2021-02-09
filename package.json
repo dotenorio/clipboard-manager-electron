@@ -1,6 +1,6 @@
 {
   "name": "clipboard-manager-electron",
-  "version": "3.6.4",
+  "version": "3.6.5",
   "description": "A clipboard manager built with Electron",
   "main": "main.js",
   "scripts": {
