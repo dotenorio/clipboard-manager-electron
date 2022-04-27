@@ -13,14 +13,14 @@
   "license": "MIT",
   "dependencies": {
     "auto-launch": "^5.0.5",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "lowdb": "^1.0.0",
-    "node-notifier": "^8.0.0"
+    "node-notifier": "^10.0.1"
   },
   "devDependencies": {
-    "electron": "^10.1.1",
-    "electron-builder": "^22.8.0",
-    "standard": "^14.3.4"
+    "electron": "^18.1.0",
+    "electron-builder": "^23.0.3",
+    "standard": "^17.0.0"
   },
   "repository": {
     "type": "git",
